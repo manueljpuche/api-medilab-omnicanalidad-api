@@ -5,3 +5,7 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {"message": "API Medilab funcionando correctamente"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
